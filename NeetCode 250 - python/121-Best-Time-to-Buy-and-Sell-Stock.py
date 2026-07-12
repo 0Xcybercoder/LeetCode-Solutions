@@ -4,14 +4,11 @@ class Solution:
         temp = [0] * (len(prices) - 1)
 
         profit = 0
-        if len(prices) > 2:
-            for i in range(len(temp) - 1, -1, -1):
-                temp[i] = mx
-                if prices[i] > mx:
-                    mx = prices[i]
-        elif len(prices) == 2:
-            profit = prices[1] - prices[0]
-            return profit if profit > 0 else 0
+        for i in range(len(temp) - 1, -1, -1):
+            temp[i] = mx
+            if prices[i] > mx:
+                mx = prices[i]
+
 
         mx = 0
         for i in range(len(prices) - 1):
