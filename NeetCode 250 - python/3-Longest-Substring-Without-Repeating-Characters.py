@@ -5,7 +5,7 @@ class Solution:
         cur = 0
         st = 0
         check = False
-
+        
         while cur < len(s):
             if s[cur] not in temp:
                 temp += s[cur]
@@ -18,7 +18,5 @@ class Solution:
                 st = cur
                 temp = ""
             check = False
-
-
 
         return mx
